@@ -11,6 +11,10 @@ Adicionar navegação real por mouse; skins 3D/vozes por jogador; cosméticos lo
 Não criar outro Anchor, hospedar ROMs, substituir OOTServer, exigir texturas idênticas, instalar automaticamente pacote arbitrário ou prometer suporte universal a mods.
 Migração automática de host, mod workshop, rebalanceamento de chefes, editor de skins, voz em tempo real e formatos com código executável ficam fora do MVP.
 
+## Gate obrigatorio antes de desenvolver
+
+**Nenhuma fase funcional comeca sem uma auditoria de reutilizacao do upstream.** Inspecionar os componentes ja existentes (principalmente `PlayerSkin`, `PlayerPuppetController`, `ResourceDownloader`, eventos de audio, `OOTSteamLink` e `ZeldaOnline`), documentar o gap real e optar pela menor extensao segura. Proibido reescrever ou duplicar um sistema funcional sem justificativa tecnica, teste comparativo, revisao e rollback. Aplicar o checklist em [UPSTREAM_REUSE_POLICY](UPSTREAM_REUSE_POLICY.md); este gate vale para P1-P8 e para todos os PRs. Atualizar o mapa de codigo quando o upstream mudar.
+
 ## Fases com dependências e gates
 
 | Fase | Entregáveis futuros | Dependências | Aceite de saída |
