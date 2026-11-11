@@ -1,3 +1,45 @@
+# Ocarina Co-op — planejamento do fork
+
+Este fork de [cranebeaker/ocarina-coop](https://github.com/cranebeaker/ocarina-coop), branch `story-coop`, registra o planejamento técnico solicitado para mouse nos menus, skins 3D/vozes individuais, compatibilidade cosmética, transferência autorizada via Steam e melhorias de chefes.
+
+**Estado em 11/11/2026: somente documentação. Nenhuma funcionalidade nova foi implementada ou testada em jogo nesta entrega.** Código, histórico, submódulos, scripts e workflows upstream foram preservados.
+Base inspecionada: [7b912675f2e0627fb5c9a7e4a5ae937e574160f1](https://github.com/cranebeaker/ocarina-coop/commit/7b912675f2e0627fb5c9a7e4a5ae937e574160f1).
+
+## Planejamento técnico
+
+| Documento | Conteúdo |
+| --- | --- |
+| [ROADMAP](docs/ROADMAP.md) | Fases, dependências, entregáveis, riscos e gates |
+| [ARCHITECTURE](docs/ARCHITECTURE.md) | Código real inspecionado, módulos propostos, save e limites de confiança |
+| [MOUSE_MENUS](docs/MOUSE_MENUS.md) | Inventário, equipamento e mapa por mouse; controles preservados |
+| [SKIN_AUDIO_SYNC](docs/SKIN_AUDIO_SYNC.md) | Importação .otr/.o2r, modelo/voz por jogador, namespace e fallback |
+| [MOD_COMPATIBILITY](docs/MOD_COMPATIBILITY.md) | Classificação, gameplay fingerprint e texturas HD somente locais |
+| [STEAM_TRANSFER](docs/STEAM_TRANSFER.md) | P2P opcional, consentimento/licença, hashing, cache, sandbox e Spacewar |
+| [BOSS_COOP](docs/BOSS_COOP.md) | Auditoria de combate existente e estudo de OOT True Co-op |
+| [TEST_PLAN](docs/TEST_PLAN.md) | Matriz de testes e evidências necessárias para aceite |
+
+## Resultado pretendido
+
+A usa skin de personagem com voz e mundo 4K; B usa Link e texturas padrão. Ambos veem/ouvem cada personagem com sua própria seleção, enquanto cada PC mantém suas texturas do mundo.
+Compartilhar somente recursos autorizados do personagem, mediante consentimento, licença e validação. Download recusado, proibido ou inválido usa Link/voz padrão.
+Mouse interage com os elementos reais dos menus, com teclado/controle funcionando. Steam co-op, servidor local e save de equipe continuam sendo os existentes.
+
+Skins convencionais podem substituir caminhos globais; isolamento e classificação ainda precisam ser desenvolvidos e provados. Não há promessa de compatibilidade universal. Não falsificar mods como originais: comparar gameplay separadamente de cosméticos validados.
+[Hatsune Miku Model + Voice Pack](https://gamebanana.com/mods/637761) é referência de uso; nenhum arquivo foi incluído e sua licença de adaptação/redistribuição permanece pendente de verificação.
+[OOT True Co-op](https://github.com/bghill95/OOT-True-Co-op) é referência conceitual/de testes; não copiar diretamente sua camada Anchor para este netcode ZeldaOnline.
+
+## Restrições
+
+Cada jogador precisa de ROM própria suportada obtida legalmente. Não enviar ROM nem assets originais extraídos pela rede ou pelo repositório.
+O upstream utiliza Spacewar/AppID 480 no helper Steam. A Valve documenta Spacewar como [aplicativo de exemplo](https://partner.steamgames.com/doc/sdk/api/example); isso não constitui autorização para distribuir um produto sob essa identidade. Builds futuras exigem revisão das condições aplicáveis, runtime e AppID autorizado ou transporte alternativo.
+Preservar créditos e avisos de cada componente; não atribuir licença nova ao código herdado.
+
+---
+
+## README upstream preservado
+
+O conteúdo abaixo foi mantido integralmente como referência da base. Ele descreve o upstream, não certifica funcionalidades novas do planejamento.
+
 # Ocarina of Time Story Co-op
 
 **Play the whole of Ocarina of Time with a friend: one shared story, one team save, and you time travel together.**
