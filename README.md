@@ -5,6 +5,10 @@ Este fork de [cranebeaker/ocarina-coop](https://github.com/cranebeaker/ocarina-c
 **Estado em 11/11/2026: somente documentação. Nenhuma funcionalidade nova foi implementada ou testada em jogo nesta entrega.** Código, histórico, submódulos, scripts e workflows upstream foram preservados.
 Base inspecionada: [7b912675f2e0627fb5c9a7e4a5ae937e574160f1](https://github.com/cranebeaker/ocarina-coop/commit/7b912675f2e0627fb5c9a7e4a5ae937e574160f1).
 
+## Regra obrigatoria de reutilizacao do upstream
+
+**Antes de implementar qualquer melhoria, auditar e reutilizar os sistemas existentes do Ocarina Co-op.** Em especial, estender `PlayerSkin`, `PlayerPuppetController`, `ResourceDownloader`, fluxo de audio, `OOTSteamLink` e netcode existentes; nao recriar gerenciador de skins, downloader ou multiplayer sem justificativa tecnica demonstrada. Consultar a [politica de reutilizacao do upstream](docs/UPSTREAM_REUSE_POLICY.md) e registrar as evidencias em cada PR.
+
 ## Planejamento técnico
 
 | Documento | Conteúdo |
