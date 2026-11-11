@@ -11,6 +11,8 @@ Base inspecionada: [7b912675f2e0627fb5c9a7e4a5ae937e574160f1](https://github.com
 
 ## Planejamento técnico
 
+Auditoria P1 iniciada: [baseline Windows e Graphify local](docs/BASELINE_AUDIT.md). Grafo consultável gerado; compilação e testes de jogo ainda bloqueados por pré-requisitos. Nenhuma funcionalidade nova de jogo é anunciada.
+
 | Documento | Conteúdo |
 | --- | --- |
 | [ROADMAP](docs/ROADMAP.md) | Fases, dependências, entregáveis, riscos e gates |
